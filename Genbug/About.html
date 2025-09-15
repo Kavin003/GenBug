@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Genbug Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    .about-section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section h1 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .about-section h2 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .about-section h3 {
+      font-size: 1.0rem;
+      color: #003366;
+      text-align: left;
+    }
+    .about-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 1.5rem;
+      }
+
+      .about-section h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text, .about-image {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <h2 style="color:white;">Genbug Solutions</h2>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Our Services</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+  <section class="about-section">
+    
+    <div class="about-content">
+        <div class="about-text">
+            <h1>Our Expertise</h1>
+            <p>
+                We are a leading Information Technology company 
+                providing innovative digital solutions and 
+                reliable services to businesses of all sizes.
+                Our experienced team is passionate about 
+                delivering cutting-edge technology, tailored strategies, 
+                and exceptional customer support to help 
+                our clients thrive in the ever-changing digital world.
+            </p>
+        </div>
+      <div class="about-image">
+        <img src="assets/img/abt1.png" alt="About Us Image" />
+      </div>
+    </div>
+    <div class="about-content">
+        <div class="about-image">
+            <img src="assets/img/abt2.png" alt="About Us Image" />
+        </div>
+        <div class="about-text">
+            <h2>Our Mission & Vision</h2>
+            <p>
+                Our mission is to empower businesses through transformative
+                technology that drives growth, efficiency, and innovation.
+                We envision a future where every organization—regardless of
+                size—can access world-class IT solutions, enabling them to
+                stay competitive and succeed in the digital era.
+            </p>
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Genbug Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>
