@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Cards UI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    .services1-showcase {
+      text-align: center;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .section1-lable {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .service-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #ccc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0,0,0,0.05) 0%, transparent 50%, rgba(0,0,0,0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      transition: filter 0.3s ease;
+    }
+
+    .service-card:hover .card-image {
+      filter: brightness(1.1);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #003366;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .services1-showcase {
+        padding: 1.5rem;
+      }
+
+      .section1-lable {
+        font-size: 2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <h2 style="color:white;">Genbug Solutions</h2>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Our Services</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="services1-showcase">
+    <h1 class="section1-lable">Our Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <img class="card-image" src="assets/img/cloud.png" alt="Cloud Solutions">
+        <h3 class="card-title">Cloud Solutions Development</h3>
+        <p class="card-description">We provide comprehensive cloud solutions, from migration to management, ensuring scalability and security for your business.</p>
+      </div>
+
+      <div class="service-card">
+        <img class="card-image" src="assets/img/mobile.png" alt="Machine Learning">
+        <h3 class="card-title">Mobile Application Development</h3>
+        <p class="card-description">We develop secure, high-performance mobile applications for Android and iOS. With intuitive, user-friendly designs and engaging UI/UX, our apps deliver seamless experiences across all devices.</p>
+      </div>
+
+      <div class="service-card">
+        <img class="card-image" src="assets/img/e-commerce.avif" alt="E-commerce">
+        <h3 class="card-title">E-commerce Development</h3>
+        <p class="card-description">We build e-commerce solutions that drive growth. Our online stores feature secure payments, streamlined product management, and a seamless shopping experience designed for high conversions.</p>
+      </div>
+
+      <div class="service-card">
+        <img class="card-image" src="assets/img/custom-software.jpg" alt="Custom Software">
+        <h3 class="card-title">Custom Software Development</h3>
+        <p class="card-description">We craft tailored software solutions to solve your unique business challenges. Boost efficiency and drive innovation with applications designed to streamline your workflows.</p>
+      </div>
+
+      <div class="service-card">
+        <img class="card-image" src="assets/img/web.jpg" alt="Web Development">
+        <h3 class="card-title">Web Development</h3>
+        <p class="card-description">We craft scalable, secure, and responsive websites using the latest technologies. Our web development services empower your business with a strong, user-centric digital presence that drives results.</p>
+      </div>
+
+      <div class="service-card">
+        <img class="card-image" src="assets/img/banking.png" alt="Banking Software">
+        <h3 class="card-title">Banking Software Development</h3>
+        <p class="card-description">We develop secure and scalable banking software solutions, including mobile banking apps and financial management systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Genbug Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>
